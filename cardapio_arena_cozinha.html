@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Arena Sport & Cozinha</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .menu-container {
+            background: linear-gradient(135deg, #2c2c2c, #0d0d0d);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            border: 1px solid #444;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #4CAF50;
+        }
+        
+        .logo-img {
+            max-width: 220px;
+            display: block;
+            margin: 0 auto 20px auto;
+            border-radius: 10px;
+            <!--border: 2px solid #4CAF50;-->
+        }
+        
+        .logo-placeholder {
+            width: 220px;
+            height: 120px;
+            margin: 0 auto 20px auto;
+            background-color: #2E7D32;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            border: 2px solid #4CAF50;
+        }
+        
+        .logo-placeholder span:first-child {
+            font-size: 32px;
+            letter-spacing: 3px;
+        }
+        
+        .logo-placeholder span:last-child {
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+        
+        .header h1 {
+            font-size: 42px;
+            color: #4CAF50;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header h2 {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #4CAF50, transparent);
+            margin: 25px 0;
+        }
+        
+        .section-title {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-align: center;
+            padding: 8px;
+            background-color: rgba(76, 175, 80, 0.1);
+            border-radius: 5px;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #444;
+        }
+        
+        .item-name {
+            flex: 2;
+            font-size: 17px;
+        }
+        
+        .item-price {
+            flex: 1;
+            text-align: right;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 17px;
+        }
+        
+        .item-description {
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 3px;
+            font-style: italic;
+        }
+        
+        .two-columns {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .instructions {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .instructions h3 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .menu-container {
+                box-shadow: none;
+                border: none;
+                padding: 15px;
+            }
+            .instructions {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .two-columns {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="header">
+            <!-- COMO ADICIONAR SUA LOGO: -->
+            <!-- 1. Coloque sua imagem na mesma pasta que este arquivo -->
+            <!-- 2. Substitua "logo.jpg" pelo nome do seu arquivo de logo -->
+            <!-- 3. Apague a div com class="logo-placeholder" -->
+            
+            <!-- LOGO COMENTADA <img src="logo.jpg" alt="ARENA SPORT & COZINHA" class="logo-img"> -->
+            
+            <!--<div class="logo-placeholder">
+                <span>ARENA</span>
+                <span>SPORT & COZINHA</span>
+            </div> -->
+            
+            
+            <h1>ARENA</h1>
+            <h2>SPORT & COZINHA</h2>
+			
+        <!--</div>-->
+        
+        <div class="divider"></div>
+        
+        <div class="section-title">Porções Unidade</div>
+        <div class="menu-item">
+            <div class="item-name">Pastel</div>
+            <div class="item-price">R$ 7,00</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">Quibe</div>
+            <div class="item-price">R$ 8,00</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">Torresmo</div>
+            <div class="item-price">R$ 10,00</div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section-title">Porções Grande</div>
+        <div class="menu-item">
+            <div class="item-name">Carne de sol com batata frita ou mandioca</div>
+            <div class="item-price">R$ 55,00</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">Frango a passarinho</div>
+            <div class="item-price">R$ 35,00</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">Peixe - Filé de tilápia</div>
+            <div class="item-price">R$ 68,00</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">Posta de tilápia</div>
+            <div class="item-price">R$ 48,00</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">Batata frita simples</div>
+            <div class="item-price">R$ 22,00</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">Batata com cheddar e bacon</div>
+            <div class="item-price">R$ 30,00</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">Mini pastéis (8 unidades)
+                <div class="item-description">Carne e queijo ou pizza</div>
+            </div>
+            <div class="item-price">R$ 35,00</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">Calabresa</div>
+            <div class="item-price">R$ 25,00</div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section-title">Caldos</div>
+        <div class="menu-item">
+            <div class="item-name">Pequeno</div>
+            <div class="item-price">R$ 12,00</div>
+        </div>
+        <div class="menu-item">
+            <div class="item-name">Grande</div>
+            <div class="item-price">R$ 17,00</div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="two-columns">
+            <div class="column">
+                <div class="section-title">Cervejas 600ml</div>
+                <div class="menu-item">
+                    <div class="item-name">Heineken</div>
+                    <div class="item-price">R$ 15,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Original</div>
+                    <div class="item-price">R$ 12,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Spaten</div>
+                    <div class="item-price">R$ 12,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Amstel</div>
+                    <div class="item-price">R$ 11,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Antarctica</div>
+                    <div class="item-price">R$ 11,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Brahma</div>
+                    <div class="item-price">R$ 11,00</div>
+                </div>
+                
+                <div class="section-title" style="margin-top: 30px;">Cervejas Long Neck</div>
+                <div class="menu-item">
+                    <div class="item-name">Heineken</div>
+                    <div class="item-price">R$ 8,50</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Corona</div>
+                    <div class="item-price">R$ 8,50</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Spaten</div>
+                    <div class="item-price">R$ 7,50</div>
+                </div>
+                
+                <div class="section-title" style="margin-top: 30px;">Cerveja Profissa 300ml</div>
+                <div class="menu-item">
+                    <div class="item-name">Antarctica</div>
+                    <div class="item-price">R$ 4,50</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Brahma Chopp</div>
+                    <div class="item-price">R$ 4,50</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Budweiser</div>
+                    <div class="item-price">R$ 5,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Original</div>
+                    <div class="item-price">R$ 5,00</div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="section-title">Bebidas Alcoólicas</div>
+                <div class="section-title" style="font-size: 18px; margin: 15px 0 10px;">Whisky</div>
+                <div class="menu-item">
+                    <div class="item-name">White Horse</div>
+                    <div class="item-price">R$ 15,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Red Label</div>
+                    <div class="item-price">R$ 20,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Old Parr</div>
+                    <div class="item-price">R$ 25,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Buchanan's</div>
+                    <div class="item-price">R$ 25,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Jack Daniel's</div>
+                    <div class="item-price">R$ 25,00</div>
+                </div>
+                
+                <div class="section-title" style="font-size: 18px; margin: 15px 0 10px;">Gin</div>
+                <div class="menu-item">
+                    <div class="item-name">Tanqueray</div>
+                    <div class="item-price">R$ 25,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Gin Rocks</div>
+                    <div class="item-price">R$ 10,00</div>
+                </div>
+                
+                <div class="section-title" style="font-size: 18px; margin: 15px 0 10px;">Vodka</div>
+                <div class="menu-item">
+                    <div class="item-name">Absolut</div>
+                    <div class="item-price">R$ 20,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Smirnoff</div>
+                    <div class="item-price">R$ 10,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Orloff</div>
+                    <div class="item-price">R$ 6,00</div>
+                </div>
+                
+                <div class="section-title" style="font-size: 18px; margin: 15px 0 10px;">Outras</div>
+                <div class="menu-item">
+                    <div class="item-name">Tequila José Cuervo</div>
+                    <div class="item-price">R$ 12,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Campari</div>
+                    <div class="item-price">R$ 10,00</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section-title">Combos Especiais</div>
+        <div class="two-columns">
+            <div class="column">
+                <div class="section-title" style="font-size: 18px;">Copão + Red Bull + Gelo de Sabor</div>
+                <div class="menu-item">
+                    <div class="item-name">Buchanan's</div>
+                    <div class="item-price">R$ 40,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Old Parr</div>
+                    <div class="item-price">R$ 40,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Jack Daniel's</div>
+                    <div class="item-price">R$ 35,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Red Label</div>
+                    <div class="item-price">R$ 30,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">White Horse</div>
+                    <div class="item-price">R$ 25,00</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="section-title" style="font-size: 18px;">Copão + Bally + Gelo de Sabor</div>
+                <div class="menu-item">
+                    <div class="item-name">Buchanan's</div>
+                    <div class="item-price">R$ 35,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Old Parr</div>
+                    <div class="item-price">R$ 35,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Jack Daniel's</div>
+                    <div class="item-price">R$ 30,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Red Label</div>
+                    <div class="item-price">R$ 25,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">White Horse</div>
+                    <div class="item-price">R$ 20,00</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section-title">Bebidas Não Alcoólicas</div>
+        <div class="two-columns">
+            <div class="column">
+                <div class="menu-item">
+                    <div class="item-name">Água</div>
+                    <div class="item-price">R$ 3,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Água sem gás</div>
+                    <div class="item-price">R$ 4,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Coca-Cola 310ml</div>
+                    <div class="item-price">R$ 5,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Sprite 310ml</div>
+                    <div class="item-price">R$ 5,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Fanta Uva 310ml</div>
+                    <div class="item-price">R$ 5,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Fanta Laranja 310ml</div>
+                    <div class="item-price">R$ 5,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Coca-Cola KS</div>
+                    <div class="item-price">R$ 4,50</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Coca-Cola 2L</div>
+                    <div class="item-price">R$ 12,00</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="section-title" style="font-size: 18px;">Energéticos</div>
+                <div class="menu-item">
+                    <div class="item-name">Red Bull 269ml</div>
+                    <div class="item-price">R$ 11,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Monster</div>
+                    <div class="item-price">R$ 11,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Bally 2L</div>
+                    <div class="item-price">R$ 15,00</div>
+                </div>
+                
+                <div class="section-title" style="font-size: 18px; margin-top: 15px;">Outras</div>
+                <div class="menu-item">
+                    <div class="item-name">Água de Coco 1L</div>
+                    <div class="item-price">R$ 14,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Suco (Copo)</div>
+                    <div class="item-price">R$ 9,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Suco (Jarra)</div>
+                    <div class="item-price">R$ 22,00</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section-title">Drinks</div>
+        <div class="two-columns">
+            <div class="column">
+                <div class="menu-item">
+                    <div class="item-name">Caipirinha</div>
+                    <div class="item-price">R$ 11,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Caipiroska</div>
+                    <div class="item-price">R$ 13,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Caipigin</div>
+                    <div class="item-price">R$ 14,00</div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="menu-item">
+                    <div class="item-name">Gin Tônica</div>
+                    <div class="item-price">R$ 15,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Mojito</div>
+                    <div class="item-price">R$ 14,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Cuba Libre</div>
+                    <div class="item-price">R$ 14,00</div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Traçado</div>
+                    <div class="item-price">R$ 8,00</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Arena Sport & Cozinha - O melhor lugar para assistir aos jogos do seu time ⚽!
+        </div>
+        
+       
+    </div>
+</body>
+</html>
